@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>سايتك عليا | مواقع ومنيوهات للمطاعم والمحلات</title>
+<meta name="description" content="بعملك موقع بمنيو وطلبات واتساب، جاهز في يومين. للمطاعم والمحلات وجروبات البيع.">
+<meta name="theme-color" content="#0b1024">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="سايتك عليا">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b1024; --ink2:#141a3a; --line:#262e5c;
+  --violet:#a78bfa; --cyan:#22d3ee; --wa:#25d366; --gold:#fde047;
+  --paper:#f4f6ff; --text:#e8ecff; --mute:#9aa4d4;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:"Cairo",system-ui,sans-serif;background:var(--ink);color:var(--text);line-height:1.7;padding-bottom:env(safe-area-inset-bottom)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+
+/* top bar */
+header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;max-width:1040px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.25rem}
+.brand img{width:40px;height:40px;border-radius:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;font:inherit;font-weight:700;border-radius:999px;padding:12px 26px;transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.btn-wa{background:var(--wa);color:#05260f}
+.btn-ghost{background:transparent;color:var(--text);border:2px solid var(--line)}
+
+/* hero */
+.hero{display:grid;gap:36px;align-items:center;padding:28px 0 64px}
+@media(min-width:820px){.hero{grid-template-columns:1.1fr .9fr;padding:56px 0 90px}}
+h1{font-size:clamp(2.2rem,7vw,4rem);font-weight:900;line-height:1.25}
+h1 span{color:var(--cyan)}
+.lead{color:var(--mute);font-size:1.15rem;max-width:34ch;margin:16px 0 26px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.offer{margin-top:22px;display:inline-block;border:2px dashed var(--gold);color:var(--gold);padding:6px 16px;border-radius:14px;font-weight:700}
+
+/* phone demo */
+.stage{display:flex;justify-content:center}
+.phone{width:min(290px,78vw);aspect-ratio:9/18.5;border-radius:42px;border:10px solid var(--ink2);outline:2px solid var(--line);background:#fff;color:#14172e;overflow:hidden;box-shadow:0 30px 60px -20px #000a;display:flex;flex-direction:column}
+.p-head{padding:18px 16px 14px;color:#fff;transition:background .5s}
+.p-head small{opacity:.8;display:block;font-size:.72rem}
+.p-head b{font-size:1.1rem}
+.p-list{padding:12px;display:grid;gap:10px;flex:1;align-content:start}
+.item{display:flex;align-items:center;gap:10px;background:#f1f3fb;border-radius:14px;padding:10px;animation:in .45s both}
+.item i{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-style:normal;font-size:1.4rem;background:#fff}
+.item div{flex:1;font-size:.86rem;font-weight:700;line-height:1.35}
+.item em{font-style:normal;font-weight:500;color:#6a7090;font-size:.74rem;display:block}
+.item span{font-weight:900;font-size:.82rem}
+.p-btn{margin:0 12px 14px;background:var(--wa);color:#05260f;text-align:center;font-weight:900;border-radius:14px;padding:11px;font-size:.9rem}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* sections */
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.6rem,4.5vw,2.4rem);font-weight:900;margin-bottom:28px}
+.rows{display:grid}
+.row{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;padding:20px 0;border-bottom:1px solid var(--line);align-items:center}
+.row:first-child{border-top:1px solid var(--line)}
+.row .ic{grid-row:span 2;font-size:2rem;width:60px;height:60px;display:grid;place-items:center;background:var(--ink2);border-radius:18px}
+.row h3{font-size:1.25rem;font-weight:700}
+.row p{color:var(--mute)}
+.steps{counter-reset:s;display:grid;gap:18px;list-style:none;padding:0}
+.steps li{counter-increment:s;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
+.steps li::before{content:counter(s);width:44px;height:44px;border-radius:50%;background:var(--violet);color:var(--ink);font-weight:900;display:grid;place-items:center}
+.steps b{display:block;font-size:1.15rem}
+.steps span{color:var(--mute)}
+.light{background:var(--paper);color:#14172e;border-top:0}
+.light .steps span{color:#4b5278}
+.final{text-align:center}
+.final h2{margin-bottom:10px}
+.final p{color:var(--mute);margin-bottom:24px}
+footer{padding:26px 20px calc(26px + 70px);text-align:center;color:var(--mute);font-size:.9rem;border-top:1px solid var(--line)}
+
+/* floating whatsapp */
+.fab{position:fixed;inset-inline-start:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:20;background:var(--wa);color:#05260f;font-weight:900;border-radius:999px;padding:13px 22px;box-shadow:0 10px 30px #0008}
+
+/* install banner */
+#install{position:fixed;inset-inline:12px;top:calc(12px + env(safe-area-inset-top));z-index:30;background:var(--ink2);border:1px solid var(--violet);border-radius:20px;padding:14px;display:none;gap:12px;align-items:center;box-shadow:0 20px 50px #000a}
+#install.show{display:flex;animation:in .4s both}
+#install img{width:46px;height:46px;border-radius:12px}
+#install .t{flex:1;font-size:.92rem;line-height:1.4}
+#install .t b{display:block;font-size:1rem}
+#install .btn{padding:9px 18px;font-size:.9rem}
+#install .x{background:none;border:0;color:var(--mute);font-size:1.4rem;cursor:pointer;padding:4px 8px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div id="install" role="dialog" aria-label="تثبيت التطبيق">
+  <img src="icon-192.png" alt="">
+  <div class="t"><b>ثبّت سايتك عليا</b><span id="installMsg">أضفه لشاشتك وافتحه في ثانية</span></div>
+  <button class="btn btn-wa" id="installBtn">تثبيت</button>
+  <button class="x" id="installX" aria-label="إغلاق">×</button>
+</div>
+
+<header>
+  <div class="brand"><img src="icon-192.png" alt="">سايتك عليا</div>
+  <a class="btn btn-ghost wa-link" href="#">كلمني</a>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <h1>عندك مطعم أو محل؟<br><span>موقعك جاهز في يومين</span></h1>
+      <p class="lead">بعملك موقع بمنيو أو منتجات، والعميل يطلب منك على واتساب مباشرة.</p>
+      <div class="cta-row">
+        <a class="btn btn-wa wa-link" href="#">اطلب موقعك على واتساب</a>
+        <a class="btn btn-ghost" href="#works">شوف بيعمل إيه</a>
+      </div>
+      <div class="offer">أول 3 عملاء ليهم خصم</div>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <div class="phone">
+        <div class="p-head" id="pHead"><small id="pSub">منيو أونلاين</small><b id="pName">مطعم الأصيل</b></div>
+        <div class="p-list" id="pList"></div>
+        <div class="p-btn">اطلب على واتساب</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="works">
+    <h2>بعمل موقع لأي نشاط</h2>
+    <div class="rows">
+      <div class="row"><div class="ic">🍔</div><h3>مطاعم وكافيهات</h3><p>منيو بالصور والأسعار، وطلب توصيل على واتساب.</p></div>
+      <div class="row"><div class="ic">👕</div><h3>محلات ملابس</h3><p>عرض المنتجات والمقاسات، والعميل يطلب في ضغطة.</p></div>
+      <div class="row"><div class="ic">💍</div><h3>إكسسوارات وهاند ميد</h3><p>صفحة شيك لشغلك بدل ما يضيع بين البوستات.</p></div>
+      <div class="row"><div class="ic">👥</div><h3>جروبات البيع</h3><p>لينك واحد فيه كل منتجاتك وتحطه في الجروب والبايو.</p></div>
+    </div>
+  </section>
+</main>
+
+<section class="light">
+  <div class="wrap">
+    <h2>الخطوات بسيطة</h2>
+    <ol class="steps">
+      <li><div><b>تبعتلي منتجاتك أو المنيو</b><span>صور وأسعار على واتساب وبس.</span></div></li>
+      <li><div><b>أصمم الموقع بهويتك</b><span>ألوان ولوجو شغلك، وشكل يشتغل على الموبايل.</span></div></li>
+      <li><div><b>يتسلم في يومين</b><span>بلينك جاهز تحطه في البايو وتبدأ تستقبل طلبات.</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>جاهز تبدأ؟</h2>
+    <p>أول 3 عملاء ليهم خصم، كلمني دلوقتي.</p>
+    <a class="btn btn-wa wa-link" href="#">كلمني على واتساب</a>
+  </div>
+</section>
+
+<footer>© سايتك عليا</footer>
+<a class="fab wa-link" href="#">واتساب</a>
+
+<script>
+/* ===== غيّر الرقم هنا (بصيغة دولية بدون + ، مثال مصر: 201012345678) ===== */
+const WA_NUMBER = "201000000000";
+const WA_TEXT = "أهلاً، عايز أعمل موقع لنشاطي";
+
+document.querySelectorAll(".wa-link").forEach(a=>{
+  a.href = "https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(WA_TEXT);
+  a.target = "_blank"; a.rel = "noopener";
+});
+
+/* ===== عرض الموبايل المتغير ===== */
+const demos=[
+ {sub:"منيو أونلاين",name:"مطعم الأصيل",bg:"#e11d48",items:[["🍔","برجر دبل","جبنة وصوص خاص","95 ج"],["🍕","بيتزا مارجريتا","حجم وسط","110 ج"],["🥤","عصير مانجو","فريش","35 ج"]]},
+ {sub:"كتالوج المنتجات",name:"ستايل ستور",bg:"#7c3aed",items:[["👕","تيشرت أوفر سايز","كل المقاسات","250 ج"],["👖","جينز مستقيم","أزرق غامق","420 ج"],["🧥","جاكيت شتوي","بطانة فرو","650 ج"]]},
+ {sub:"شغل هاند ميد",name:"لمسة اكسسوار",bg:"#0891b2",items:[["💍","خاتم فضة","عيار 925","180 ج"],["📿","سلسلة بحروف","اكتب اسمك","150 ج"],["👜","شنطة كروشيه","صناعة يدوية","300 ج"]]}
+];
+let di=0;
+function showDemo(){
+  const d=demos[di%demos.length]; di++;
+  document.getElementById("pHead").style.background=d.bg;
+  document.getElementById("pSub").textContent=d.sub;
+  document.getElementById("pName").textContent=d.name;
+  document.getElementById("pList").innerHTML=d.items.map((x,i)=>
+   `<div class="item" style="animation-delay:${i*90}ms"><i>${x[0]}</i><div>${x[1]}<em>${x[2]}</em></div><span>${x[3]}</span></div>`).join("");
+}
+showDemo(); setInterval(showDemo,3200);
+
+/* ===== التثبيت أول ما يفتح الموقع ===== */
+if("serviceWorker" in navigator){ addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{})); }
+
+const box=document.getElementById("install"),btn=document.getElementById("installBtn"),msg=document.getElementById("installMsg");
+const standalone=matchMedia("(display-mode: standalone)").matches||navigator.standalone;
+const isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent);
+let deferred=null;
+function dismissed(){try{return sessionStorage.getItem("hideInstall")}catch(e){return null}}
+function hide(){box.classList.remove("show");try{sessionStorage.setItem("hideInstall","1")}catch(e){}}
+document.getElementById("installX").onclick=hide;
+
+if(!standalone && !dismissed()){
+  addEventListener("beforeinstallprompt",e=>{
+    e.preventDefault(); deferred=e; box.classList.add("show");
+  });
+  if(isIOS){
+    msg.textContent="اضغط زر المشاركة ⬆️ ثم «إضافة إلى الشاشة الرئيسية»";
+    btn.style.display="none"; box.classList.add("show");
+  }
+}
+btn.onclick=async()=>{
+  if(!deferred) return;
+  deferred.prompt();
+  await deferred.userChoice;
+  deferred=null; hide();
+};
+addEventListener("appinstalled",hide);
+</script>
+</body>
+</html>
