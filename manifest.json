@@ -1,7 +1,7 @@
 {
-  "name": "سايتك عليا",
-  "short_name": "سايتك عليا",
-  "description": "مواقع ومنيوهات أونلاين للمطاعم والمحلات",
+  "name": "Dosha X",
+  "short_name": "Dosha X",
+  "description": "معًا حل كل مشاكلك، سايتك علينا: مواقع ومنيوهات للمطاعم والمحلات",
   "lang": "ar",
   "dir": "rtl",
   "start_url": "./index.html",
